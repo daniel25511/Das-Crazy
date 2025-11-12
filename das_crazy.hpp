@@ -5,6 +5,11 @@
 namespace das_crazy
 {
   struct [[nodiscard]] das_crazy {};
+
+  [[nodiscard]] auto operator==([[maybe_unused]] das_crazy left, [[maybe_unused]] das_crazy right) noexcept -> bool
+  {
+    return true;
+  }
 }
 
 template<>
