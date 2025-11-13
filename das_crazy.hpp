@@ -4,12 +4,10 @@
 
 namespace das_crazy
 {
-  struct [[nodiscard]] das_crazy {};
-
-  [[nodiscard]] auto operator==([[maybe_unused]] das_crazy left, [[maybe_unused]] das_crazy right) noexcept -> bool
+  struct [[nodiscard]] das_crazy 
   {
-    return true;
-  }
+    [[nodiscard]] auto operator<=>(const das_crazy& right) const noexcept -> auto = default;
+  };
 }
 
 template<>
